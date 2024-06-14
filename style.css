@@ -1,0 +1,405 @@
+body{
+    height: 100vh;
+    width: 100%;
+    color: white;
+}
+header{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu_side, .song_side{
+    height: 87%;
+    width:32%;
+    background-color: rgba(0, 0, 0, 0.930);
+}
+.song_side{
+    width: 68%;
+    background-color: rgba(0, 0, 0, 0.900);
+    border-right: 7px solid black;
+    border-top: 7px solid black;
+}
+.menu_side{
+    border-left: 7px solid black;
+    border-right: 7px solid black;
+    border-top: 7px solid black;
+}
+.master_play{
+    height: 13%;
+    width: 100%;
+    background-color: black;
+    display: flex; 
+    align-items: center;
+}
+.menu_side h1{
+    font-size: 16px;
+    margin: 20px 0px 20px 30px;
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+}
+.light{
+    color: rgb(155, 153, 153);
+    cursor: pointer;
+    transition: .2s linear;
+}
+.light:hover{
+    color: white;
+}
+.lib{
+    border-top: 7px solid black;
+    margin-top: 20px;
+}
+.lib .library{
+    display: flex;
+    align-items: center;
+}
+.lib .library h1{
+    margin-right: 174px;
+}
+.lib .library .plus{
+    margin-right: 8px;
+}
+.lib .lib-lists{
+    display: flex;
+    justify-content: space-evenly;
+}
+.lib .lib-lists .curve_list{
+    border-radius: 20px;
+    background-color: rgb(105,105,105,.19);
+    cursor: pointer;
+    transition: .2s linear;
+}
+.lib .lib-lists .curve_list:hover{
+    background-color: rgba(105, 105, 105, 0.320);
+}
+.lib .lib-lists h2{
+    padding: 5px 10px 0px 10px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.897);
+}
+.lib .lib-search{
+    margin: 10px 20px 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lib .lib-search h2{
+    font-size: 15px;
+    padding-top: 8px;
+}
+.lib .lib-search h2 svg{
+    margin-left: 3px;
+}
+.menu_songs{
+    width: 100%;
+    height: 305px;
+    overflow: auto;
+}
+.menu_songs::-webkit-scrollbar{
+    display: none;
+}
+.menu_songs li{
+    list-style: none;
+    padding: 5px 0px 5px 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+.menu_songs li:hover{
+    background: rgb(105,105,105,.1);
+}
+.menu_songs li img{
+    width: 50px;
+    height: 50px;
+}
+.menu_songs li h5{
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 15px;
+    width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.904);
+}
+.menu_songs li h5 .subtitle{
+    color: rgb(155, 153, 153);
+    font-size: 13px;
+    margin-top: 5px;
+}
+.master_left{
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.master_left img{
+    width: 60px;
+    height: 60px;
+}
+.master_left h6{
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: 4px;
+    width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.904);
+}
+.master_left h6 svg{
+    margin-left: 20px;
+}
+.master_left h6 .subtitle{
+    color: rgb(155, 153, 153);
+    font-size: 13px;
+}
+.master_middle{
+    margin-left: 90px;
+    width: 500px;
+    flex-wrap: wrap;
+}
+.master_middle .icons{
+    width: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 125px;
+}
+.master_middle .master_bar{
+    display: flex;
+}
+.master_middle .master_bar span{
+    font-size: 11px;
+    margin: 7px 4px 0px 4px;
+}
+/* .master_middle .master_bar .bar{
+    width: 100%;
+} */
+
+
+.seekbar {
+    width: 100%;
+    height: 4px;
+}
+input[type="range"] {
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    background: linear-gradient(to right, #0fa34d 0%, #0fa34d 0%, #ddd 0%, #ddd 100%);
+    outline: none;
+    border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* .master_right input{
+    -webkit-appearance: none;
+    position: relative;
+    width: 100%;
+    outline: none;
+    background: rgba(136, 133, 133, 0.7);
+    border-radius: 20px;
+    overflow: hidden;
+}
+.master_right input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 5px;
+    width: 20px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: -410px 0 0 400px rgb(38, 121, 38);
+    cursor: pointer;
+} */
+.master_right{
+    margin-left: 120px;
+    width:  300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.master_right input{
+    height: 4px;
+    width: 34%;
+}
+.master_right input{
+    background: linear-gradient(to right, #0fa34d 0%, #0fa34d 100%, #ddd 0%, #ddd 100%);
+}
+.master_right svg{
+    color: rgb(155, 153, 153);
+    cursor: pointer;
+    transition: .2s linear;
+}
+/***************************************************** SONG SIDE */
+.song_top{
+    display: flex;
+    align-items: center;
+}
+.song_top .light{
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.top_left{
+    width: 400px;
+    margin-top: 20px;
+    margin-left: 430px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.top_left h2{
+    padding: 7px 20px 7px 20px;
+    font-size: 15px;
+}
+.top_left .icons{
+    margin-top: -10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.top_left .curve{
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.300);
+    cursor: pointer;
+    transition: .2s linear;
+}
+.top_left .curve:hover{
+    background-color: rgba(105, 105, 105, 0.320);
+}
+.top_left .premium{
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    transition: .1s linear;
+}
+.top_left .premium:hover{
+    font-size: 15px;
+}
+.song_side .wish h1{
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-top: 5px;
+}
+.song_side .playlists{
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+.song_side .playlists .play_box{
+    height: 50px;
+    width: 286px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.123);
+    display: flex;
+    align-items: center;
+}
+.song_side .playlists .play_box:hover{
+    background: rgba(255, 255, 255, 0.2);
+}
+.song_side .playlists .play_box .image{
+    height: 50px;
+    width: 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    background-size: cover;
+}
+.song_side .playlists .play_box .image div{
+    height: 25px;
+    width: 25px;
+    background-size: cover;
+}
+.song_side .playlists .play_box h5{
+    font-size: 14.5px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.song_side .song_headings{
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.song_side .song_bottom{
+    width: 100%;
+    height: 512px;
+    overflow: auto;
+}
+.song_side .song_bottom::-webkit-scrollbar{
+    display: none;
+}
+.song_side .song_bottom .groups{
+    height: 290px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 15px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.song_side .song_bottom .groups .boxes{
+    width: 200px;
+    height: 285px;
+    border-radius: 10px;
+    overflow:hidden;
+    background-color: rgba(0, 0, 0, 0.223);
+    cursor: pointer;
+    transition: .3s linear;
+}
+.song_side .song_bottom .groups .boxes:hover{
+    background: rgb(105,105,105,.123);
+}
+.song_side .song_bottom .groups .boxes .image_box{
+    width: 170px;
+    height: 170px;
+    margin: 15px;
+    border-radius: 10px;
+    background-size: cover;
+}
+.song_side .song_bottom .groups .boxes .image_circle{
+    width: 170px;
+    height: 170px;
+    margin: 15px;
+    border-radius: 50%;
+    background-size: cover;
+}
+.song_side .song_bottom .groups .boxes h5{
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 15px;
+    width: 170px;
+    overflow:hidden;
+    color: rgba(255, 255, 255, 0.904);
+}
+.song_side .song_bottom .groups .boxes h5 .subtitle{
+    color: rgb(155, 153, 153);
+    font-size: 13px;
+    margin-top: 5px;
+}
